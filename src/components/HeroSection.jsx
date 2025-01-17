@@ -7,18 +7,18 @@ import ShopByCategory from "./ShopByCategory";
 const HeroSection = () => {
   // State to handle the image on the right side
   const [rightImage, setRightImage] = useState(
-    "https://via.placeholder.com/600x400?text=Right+Image+1" // Initial right image
+    "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp" // Initial right image
   );
 
-  const handleImageChange = () => {
-    // Change the image when the arrow is clicked
-    setRightImage(
-      rightImage ===
-        "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp"
-        ? "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-canadian-brands-new-hero.webp"
-        : "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp"
-    );
-  };
+  function handleImageChange() {
+        // Change the image when the arrow is clicked
+        setRightImage(
+            rightImage ===
+                "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp"
+                ? "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-canadian-brands-new-hero.webp"
+                : "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp"
+        );
+    }
 
   return (
     <section>
