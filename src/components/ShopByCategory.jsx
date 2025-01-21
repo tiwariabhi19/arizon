@@ -1,4 +1,5 @@
 import ShopByBrand from "./ShopByBrand";
+import ShopByRoomType from "./ShopByRoomType.JSX";
 
 const ShopByCategory = () => {
   const categories = [
@@ -42,16 +43,16 @@ const ShopByCategory = () => {
 
   return (
     <>
-      <section className="shop-by-category bg-white py-16">
+      <section className="shop-by-category bg-white py-16 px-4 sm:px-8 lg:px-16">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800">Shop by Category</h2>
         </div>
 
         {/* Categories in a single line */}
-        <div className="flex justify-center space-x-8">
+        <div className="flex justify-between gap-8">
           {categories.map((category) => (
-            <div key={category.id} className="category-item text-center">
+            <div key={category.id} className="category-item text-center w-1/6">
               <div className="circle-image-container mb-4">
                 <img
                   src={category.imgSrc}
@@ -65,38 +66,18 @@ const ShopByCategory = () => {
         </div>
       </section>
 
-      <section className="shop-by-category bg-white py-16">
-        {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800">Shop by Category</h2>
-        </div>
+      <ShopByRoomType />
 
-        {/* Categories in a single line */}
-        <div className="flex justify-center space-x-8">
-          {categories.map((category) => (
-            <div key={category.id} className="category-item text-center">
-              <div className="circle-image-container mb-4">
-                <img
-                  src={category.imgSrc}
-                  alt={category.name}
-                  className="category-image rounded-full w-40 h-40 object-cover mx-auto"
-                />
-              </div>
-              <p className="text-lg text-gray-700">{category.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
       <section>
-        <div className="flex items-center justify-center gap-4 mx-auto px-5 sm:px-8">
-          <div className="image-container w-full sm:w-1/2">
+        <div className="flex items-center justify-center gap-4 mx-auto px-4 sm:px-8 lg:px-16">
+          <div className="image-container w-full sm:w-1/2 lg:w-1/2">
             <img
               src="https://images.canadalightingexperts.com/site/common/canada/content/3-new-arrivals-hp.jpg"
               alt="Image 1"
               className="w-full h-64 object-cover rounded-lg"
             />
           </div>
-          <div className="image-container w-full sm:w-1/2">
+          <div className="image-container w-full sm:w-1/2 lg:w-1/2">
             <img
               src="https://images.canadalightingexperts.com/site/common/canada/content/3-discounts-hp.jpg?v3"
               alt="Image 2"
@@ -105,7 +86,8 @@ const ShopByCategory = () => {
           </div>
         </div>
       </section>
-      <section className="shop-by-category bg-white py-16 text-center mb-12">
+
+      <section className="shop-by-category bg-white py-16 text-center mb-12 px-4 sm:px-8 lg:px-16">
         <h1 className="text-3xl font-bold text-gray-800 mb-6">
           Shop With Confidence From Us
         </h1>
@@ -122,7 +104,6 @@ const ShopByCategory = () => {
             Low Price Guarantee
           </span>
         </p>
-
       </section>
 
       <section>

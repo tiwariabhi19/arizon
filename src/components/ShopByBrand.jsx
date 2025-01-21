@@ -40,30 +40,35 @@ const ShopByBrand = () => {
 
   return (
     <>
-      <section className="shop-by-category bg-white py-16">
-        {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800">Shop by Brand</h2>
-        </div>
+      <section className="shop-by-category bg-white py-16 px-4 sm:px-8 lg:px-16">
+  {/* Heading */}
+  <div className="text-center mb-12">
+    <h2 className="text-3xl font-bold text-gray-800">Shop by Brand</h2>
+  </div>
 
-        {/* Categories in a single line */}
-        <div className="flex justify-center space-x-8 overflow-x-auto">
-          {categories.map((category) => (
-            <div key={category.id} className="category-item text-center">
-              <div className="image-container mb-4">
-                <img
-                  src={category.imgSrc}
-                  alt={category.name}
-                  className="category-image w-48 h-auto object-cover mx-auto" // Square image (width = height)
-                />
-              </div>
-            </div>
-          ))}
+  {/* Categories in a single line */}
+  <div className="flex justify-between items-center space-x-4">
+    {categories.map((category) => (
+      <div
+        key={category.id}
+        className="category-item text-center w-1/6"
+      >
+        <div className="image-container mb-4">
+          <img
+            src={category.imgSrc}
+            alt={category.name}
+            className="category-image w-48 h-auto object-cover mx-auto"
+          />
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
+
+
       <hr className="my-4 border-t-4 border-gray-300" />
 
-      <section className="bg-white-100 p-8 text-center rounded-lg">
+      <section className="bg-white-100 p-8 text-center rounded-lg px-4 sm:px-8 lg:px-16">
         <h1 className="text-2xl font-bold text-gray-800 mb-6">
           People Who Viewed Items You Browsed Also Viewed
         </h1>

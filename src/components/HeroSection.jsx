@@ -1,72 +1,45 @@
 import { useState } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Arrow icon for switching images
-import img1 from "../assets/img1.png"; // Left image placeholder
-import fullWidthImage from "../assets/fullWidthImage.png"; // Full-width image placeholder
+import { FiArrowRight } from "react-icons/fi";
+import img1 from "../assets/img1.png";
+import fullWidthImage from "../assets/fullWidthImage.png";
 import ShopByCategory from "./ShopByCategory";
 
 const HeroSection = () => {
-  // State to handle the image on the right side
   const [rightImage, setRightImage] = useState(
-    "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp" // Initial right image
+    "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp"
   );
 
   function handleImageChange() {
-        // Change the image when the arrow is clicked
-        setRightImage(
-            rightImage ===
-                "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp"
-                ? "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-canadian-brands-new-hero.webp"
-                : "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp"
-        );
-    }
+    setRightImage(
+      rightImage ===
+        "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp"
+        ? "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-canadian-brands-new-hero.webp"
+        : "https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-3daydelivery-hero.webp"
+    );
+  }
 
   return (
     <section>
-      {/* Categories Section Below the Header */}
       <section className="bg-white py-4">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <ul className="flex justify-center space-x-6">
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              Plugin Lighting
-            </li>
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              Brands
-            </li>
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              Ceiling Lights
-            </li>
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              Chandeliers Lights
-            </li>
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              Fans
-            </li>
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              Wall Lights
-            </li>
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              Heating
-            </li>
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              Outdoor
-            </li>
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              Shop By Room
-            </li>
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              More
-            </li>
-            <li className="text-md p-2 text-black-700 hover:text-blue-600">
-              SALE
-            </li>
+          <ul className="flex justify-center space-x-6 overflow-x-auto">
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">Plugin Lighting</li>
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">Brands</li>
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">Ceiling Lights</li>
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">Chandeliers Lights</li>
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">Fans</li>
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">Wall Lights</li>
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">Heating</li>
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">Outdoor</li>
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">Shop By Room</li>
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">More</li>
+            <li className="text-md p-2 text-black-700 hover:text-blue-600">SALE</li>
           </ul>
         </div>
       </section>
 
-      {/* Image Section with Left and Right Images */}
-      <section className="bg-white max-w-7xl mx-auto px-6 py-10 flex items-center justify-between">
-        {/* Left Image */}
-        <div className="w-full sm:w-1/3 pr-6">
+      <section className="bg-white max-w-7xl mx-auto px-6 py-10 flex items-center justify-between flex-col sm:flex-row">
+        <div className="w-full sm:w-1/3 pr-6 mb-4 sm:mb-0">
           <img
             src={img1}
             alt="Left Image"
@@ -75,7 +48,6 @@ const HeroSection = () => {
           />
         </div>
 
-        {/* Right Image with Arrow Icon */}
         <div className="w-full sm:w-2/3 pl-6 flex justify-center items-center relative">
           <div className="w-full">
             <img
@@ -94,9 +66,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* New Section with Full Width Image and 4 Images Below */}
       <section className="bg-white max-w-7xl mx-auto px-6 py-10">
-        {/* Full Width Image in One Row */}
         <div className="w-full mb-8">
           <img
             src={fullWidthImage}
@@ -106,8 +76,7 @@ const HeroSection = () => {
           />
         </div>
 
-        {/* Four Images Below in One Row */}
-        <div className="flex gap-4">
+        <div className="flex gap-4 justify-center">
           <div className="w-full sm:w-1/4 bg-[#ffbd7f] p-4 rounded-lg shadow-md">
             <img
               src="https://imgcms.canadalightingexperts.com/site/common/canada/promos/2024/3-sept-heaters-electric.jpg"
